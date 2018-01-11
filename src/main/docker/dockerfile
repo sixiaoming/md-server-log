@@ -1,0 +1,8 @@
+FROM java
+
+VOLUME /tmp
+
+
+
+EXPOSE 9003
+

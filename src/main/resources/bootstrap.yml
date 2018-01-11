@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: serverLog
+    index: ${random.long}
+  output:
+    ansi:
+      enabled: always
+
+
+  cloud:
+    config:
+      profile: @profiles.active@
+#      label: v1.1
+      discovery:
+        enabled: true
+        service-id: server-config
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://server-center:8761/eureka/
+  instance:
+    preferIpAddress: true
+
+
+management:
+  security:
+    enabled: false
+
+info:
+  version: V2.1
+
